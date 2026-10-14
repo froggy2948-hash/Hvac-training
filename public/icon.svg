@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0f172a" />
+      <stop offset="100%" stopColor="#020617" />
+    </linearGradient>
+    <linearGradient id="dialGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#0284c7" />
+      <stop offset="50%" stopColor="#38bdf8" />
+      <stop offset="100%" stopColor="#f43f5e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="92" fill="none" stroke="#1e293b" stroke-width="6" />
+
+  <!-- Outer Gauge Ring -->
+  <circle cx="256" cy="256" r="180" fill="#020617" stroke="url(#dialGrad)" stroke-width="14" stroke-dasharray="840 280" stroke-linecap="round" transform="rotate(135 256 256)" />
+
+  <!-- Inner Technical Dial Markings -->
+  <circle cx="256" cy="256" r="145" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="4 8" />
+
+  <!-- Center Hub -->
+  <circle cx="256" cy="256" r="32" fill="#0f172a" stroke="#38bdf8" stroke-width="6" />
+  <circle cx="256" cy="256" r="12" fill="#38bdf8" />
+
+  <!-- Gauge Needle pointing towards 40 psig / nominal -->
+  <line x1="256" y1="256" x2="210" y2="135" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" />
+
+  <!-- Snowflake on Low Side -->
+  <g transform="translate(145, 290) scale(1.1)" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round">
+    <line x1="0" y1="-18" x2="0" y2="18" />
+    <line x1="-15.6" y1="-9" x2="15.6" y2="9" />
+    <line x1="-15.6" y1="9" x2="15.6" y2="-9" />
+    <line x1="0" y1="-12" x2="-5" y2="-15" />
+    <line x1="0" y1="-12" x2="5" y2="-15" />
+    <line x1="0" y1="12" x2="-5" y2="15" />
+    <line x1="0" y1="12" x2="5" y2="15" />
+  </g>
+
+  <!-- Flame / Heat on High Side -->
+  <g transform="translate(365, 290) scale(1.1)">
+    <path d="M 0,16 C -12,16 -16,4 -10,-6 C -6,-12 0,-20 0,-20 C 0,-20 6,-12 10,-6 C 16,4 12,16 0,16 Z" fill="#f43f5e" opacity="0.9" />
+    <path d="M 0,14 C -6,14 -8,6 -5,0 C -3,-4 0,-10 0,-10 C 0,-10 3,-4 5,0 C 8,6 6,14 0,14 Z" fill="#facc15" />
+  </g>
+
+  <!-- Title Monogram / Text -->
+  <text x="256" y="380" text-anchor="middle" fill="#f8fafc" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="800" letter-spacing="2">
+    CYCLE SIM
+  </text>
+  <text x="256" y="408" text-anchor="middle" fill="#0284c7" font-family="monospace" font-size="16" font-weight="700" letter-spacing="3">
+    EPA 608 LAB
+  </text>
+</svg>

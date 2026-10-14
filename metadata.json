@@ -1,0 +1,6 @@
+{
+  "name": "HVAC CycleSim - Refrigeration Troubleshooting & EPA 608 Exam Lab",
+  "description": "Interactive educational simulation and diagnostic troubleshooting game for HVAC technicians and students. Features live refrigeration cycle physics, digital manifold gauges, P-T calculators, 12 realistic fault scenarios, and comprehensive EPA 608 practice exams with study guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
